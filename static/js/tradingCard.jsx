@@ -63,15 +63,21 @@ function TradingCard(props) {
 }
 
 function TradingCardContainer(props){
-  const paragraphs = [];
+  const tradingCards = [];
 
   for (const currentCard of tradingCardData) {
-    paragraphs.push(<p>{currentCard.name}</p>);
+    tradingCards.push(
+      <TradingCard
+        name={currentCard["name"]}
+        skill={currentCard["skill"]}
+        imgUrl={currentCard["imgUrl"]}
+      />
+    );
   }
 
   return (
     <React.Fragment>
-      {paragraphs}
+      {tradingCards}
     </React.Fragment>
   );
 }
