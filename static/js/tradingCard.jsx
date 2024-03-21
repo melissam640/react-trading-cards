@@ -71,6 +71,7 @@ function TradingCardContainer(props){
         name={currentCard["name"]}
         skill={currentCard["skill"]}
         imgUrl={currentCard["imgUrl"]}
+        key={currentCard["cardId"]}
       />
     );
   }
